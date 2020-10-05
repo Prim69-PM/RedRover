@@ -1,0 +1,15 @@
+name: RedRover
+author: xPrim69x
+description: RedRover by Prim!
+website: https://github.com/Prim69
+version: 1.0.0
+main: xPrim69x\RedRover\Main
+api: [3.0.0]
+commands:
+  redrover:
+    description: §bStart a redrover event!
+    aliases: [rr]
+permissions:
+  redrover.create:
+    description: Permission to create a redrover event!
+    default: op

@@ -1,0 +1,8 @@
+#The world that the RedRover arena, spawn will be the worlds default spawn
+world: "RedRover"
+
+#The first player spawn for the RedRover arena
+pos: [264, 66, 260]
+   
+#The second player spawn for the RedRover arena
+pos2: [253, 66, 260]
