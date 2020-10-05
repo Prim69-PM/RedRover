@@ -264,12 +264,11 @@ class Main extends PluginBase implements Listener{
 		$cause = $player->getLastDamageCause();
 		$name = $player->getName();
 		$world = $this->getConfig()->get("world");
+		if(!in_array($name,$this->fighting)) return;
 		if(in_array($name,$this->participants)){
 			$this->removePlayer($name);
 		}
-		if(in_array($name,$this->fighting)){
-			$this->removeFighting($name);
-		}
+		$this->removeFighting($name);
 		if($cause instanceof EntityDamageByEntityEvent){
 			$damager = $cause->getDamager();
 			if($damager instanceof Player){
