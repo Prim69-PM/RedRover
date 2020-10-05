@@ -94,6 +94,14 @@ class Main extends PluginBase implements Listener{
 					$sender->sendMessage(TF::DARK_RED . "You do not have permission to use this command!");
 					return true;
 				}
+				if(!$this->redRover){
+					$sender->sendMessage(TF::RED . self::noEvent);
+					return true;
+				}
+				if(!$this->started){
+					$sender->sendMessage(TF::RED . "The RedRover event has not been started!");
+					return true;
+				}
 				if(count($this->participants) > 1){
 					list($red, $blue) = array_chunk($this->participants, ceil(count($this->participants) / 2));
 				} else {
